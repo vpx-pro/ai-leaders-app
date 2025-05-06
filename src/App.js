@@ -35,6 +35,13 @@ const leaders = [
     image: "https://tse2.mm.bing.net/th?id=OIP.u57ra7uGXXGGE0wgKTdKCwHaEK&pid=Api",
     quote: "AGI claims today are benchmark hacks. True AGI should boost economies significantly.",
     source: "https://www.geekwire.com/2025/microsoft-ceo-satya-nadella-has-a-formula-to-gauge-the-long-term-success-of-ai-investments/"
+  },
+  {
+    name: "Elon Musk",
+    title: "CEO of Tesla, SpaceX & xAI",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/The_White_House_-_54409525537_%28cropped%29.jpg/500px-The_White_House_-_54409525537_%28cropped%29.jpg",
+    quote: "If you define AGI as smarter than the smartest human, I think it's probably next year, within two years.",
+    source: "https://www.reuters.com/technology/teslas-musk-predicts-ai-will-be-smarter-than-smartest-human-next-year-2024-04-08/"
   }
 ];
 
