@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 
 const leaders = [
   {
@@ -12,7 +11,7 @@ const leaders = [
   {
     name: "Sam Altman",
     title: "CEO of OpenAI",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/73/Sam_Altman_cropped.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg/800px-Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg",
     quote: "We know how to build AGI. It could be developed this presidential term, and safety is critical.",
     source: "https://blog.samaltman.com/reflections"
   },
@@ -39,24 +38,32 @@ const leaders = [
   }
 ];
 
-function App() {
+export default function AIGlobalVoices() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-gray-100 min-h-screen">
-      {leaders.map((leader) => (
-        <div key={leader.name} className="bg-white shadow-xl rounded-2xl overflow-hidden">
-          <img src={leader.image} alt={leader.name} className="w-full h-48 object-cover" />
-          <div className="p-4">
-            <h2 className="text-xl font-bold mb-1">{leader.name}</h2>
-            <h3 className="text-gray-500 text-sm mb-3">{leader.title}</h3>
-            <p className="mb-3 text-gray-700">"{leader.quote}"</p>
-            <a href={leader.source} className="text-blue-600 hover:underline text-sm" target="_blank" rel="noopener noreferrer">
-              Source
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 p-10">
+      <h1 className="text-3xl md:text-5xl font-bold text-center text-gray-800 mb-12">🌍 AI Leaders on AGI</h1>
+      <div className="flex flex-wrap justify-center gap-8">
+        {leaders.map((leader) => (
+          <div key={leader.name} className="w-full max-w-xs bg-white rounded-2xl shadow-2xl p-6 flex flex-col items-center hover:scale-105 transform transition duration-300">
+            <img
+              src={leader.image}
+              alt={leader.name}
+              className="w-28 h-28 object-cover rounded-full shadow-lg border-4 border-white -mt-16"
+            />
+            <h2 className="text-xl font-semibold text-center mt-4 text-gray-900">{leader.name}</h2>
+            <p className="text-sm text-gray-500 text-center mb-3">{leader.title}</p>
+            <p className="text-sm text-gray-700 italic mb-4">"{leader.quote}"</p>
+            <a
+              href={leader.source}
+              className="text-blue-600 hover:underline text-sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read More →
             </a>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
-
-export default App;
